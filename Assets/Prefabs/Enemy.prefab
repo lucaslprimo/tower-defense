@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4809591447056432672}
   - component: {fileID: 4809591447056432674}
+  - component: {fileID: 6740432337618208137}
   - component: {fileID: 4809591447056432673}
   m_Layer: 0
   m_Name: Enemy
@@ -45,6 +46,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe66e63c307dcdd4abe25c98d874bad9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6740432337618208137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4809591447056432679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ecc6417dd54542b89b487b0c446093f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oneHit: 0
+  health: 100
+  onDead:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4809591447056432674}
+        m_TargetAssemblyTypeName: Primozov.TowerDefense.Enemy, Assembly-CSharp
+        m_MethodName: Die
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onTakeDamage:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!195 &4809591447056432673
 NavMeshAgent:
   m_ObjectHideFlags: 0

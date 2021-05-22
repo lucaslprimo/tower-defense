@@ -1,22 +1,31 @@
+using System;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Enemy : MonoBehaviour
+namespace Primozov.TowerDefense
 {
-    Transform playerBase;
-    NavMeshAgent agent;
-
-    // Start is called before the first frame update
-    void Start()
+    public class Enemy : MonoBehaviour
     {
-        agent = GetComponent<NavMeshAgent>();
-        playerBase = GameObject.FindGameObjectWithTag("PlayerBase").transform;
-        agent.SetDestination(playerBase.position);
-    }
+        Transform playerBase;
+        NavMeshAgent agent;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        // Start is called before the first frame update
+        void Start()
+        {
+            agent = GetComponent<NavMeshAgent>();
+            playerBase = GameObject.FindGameObjectWithTag("PlayerBase").transform;
+            agent.SetDestination(playerBase.position);
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+
+        }
+
+        public void Die()
+        {
+            Destroy(gameObject);
+        }
     }
 }
