@@ -91,6 +91,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6278167827040259110}
+  - component: {fileID: 1387221445272272591}
+  - component: {fileID: 7238503982195642271}
   m_Layer: 0
   m_Name: TileBasic
   m_TagString: Untagged
@@ -113,3 +115,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1387221445272272591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8159049114105719471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05844c88ef5f94d0f8ea4ff44609bbf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rend: {fileID: 414649740131686997}
+  highLightColor: {r: 0.24174419, g: 0.7924528, b: 0.16820934, a: 0}
+  isBuildable: 1
+--- !u!65 &7238503982195642271
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8159049114105719471}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9338722, y: 0.27928737, z: 0.91087735}
+  m_Center: {x: -0.0050706863, y: 0.14201237, z: 0.000972569}
