@@ -6,11 +6,11 @@ namespace Primozov.TowerDefense
     public class Tower : MonoBehaviour
     {
         [SerializeField] float range;
-        [SerializeField] float fireCooldown;
+        [SerializeField] float fireRate;
         [SerializeField] int damage;
         [SerializeField] Animator anim;
 
-        private float fireCooldownTime;
+        private float fireCooldown;
         private GameObject target;
         private float rotSpeed = 10;
 
@@ -58,11 +58,15 @@ namespace Primozov.TowerDefense
                 Vector3 rotation = Quaternion.Lerp(transform.rotation, lookRotation, Time.deltaTime * rotSpeed).eulerAngles;
                 transform.rotation = Quaternion.Euler(0f, rotation.y, 0f);
 
-                if (Time.time > fireCooldownTime)
+                if (fireCooldown <= 0f)
                 {
                     anim.SetTrigger("shoot");
                     target.GetComponent<Damagable>().TakeDamage(damage);
-                    fireCooldownTime = Time.time + fireCooldown;
+                    fireCooldown = 1f / fireRate; 
+                }
+                else
+                {
+                    fireCooldown -= Time.deltaTime;
                 }
             }
             else
@@ -82,5 +86,4 @@ namespace Primozov.TowerDefense
             Gizmos.DrawWireSphere(transform.position, range / 2);
         }
     }
-
 }

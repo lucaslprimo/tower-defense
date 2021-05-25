@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 5
-  fireCooldown: 2
+  fireRate: 1
   damage: 10
   anim: {fileID: 67714003231846176}
 --- !u!95 &67714003231846176
@@ -81,15 +81,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dea770f08eb31b944a4942cc3b220e53, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dea770f08eb31b944a4942cc3b220e53, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dea770f08eb31b944a4942cc3b220e53, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dea770f08eb31b944a4942cc3b220e53, type: 3}
       propertyPath: m_LocalPosition.x
