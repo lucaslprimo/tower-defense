@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,7 +7,19 @@ public class BuildingSpace : MonoBehaviour
 {
     [SerializeField] Renderer rend;
     [SerializeField] Color highLightColor;
-    public bool isBuildable;
+    [SerializeField] GameObject UiChooseTurret;
+    [SerializeField] GameObject UiEditTurret;
+
+    [SerializeField] GameObject canonPrefab;
+
+    public enum TurretType
+    {
+        CANNON
+    }
+
+    public bool isBuildable = true;
+    private bool isBuilt = false;
+    private bool isHighligthed = false;
     private Color startColor;
 
     // Start is called before the first frame update
@@ -20,6 +33,7 @@ public class BuildingSpace : MonoBehaviour
         if (isBuildable)
         {
             rend.materials[1].color = highLightColor;
+            isHighligthed = true;
         }
     }
 
@@ -28,7 +42,13 @@ public class BuildingSpace : MonoBehaviour
         if (isBuildable)
         {
             rend.materials[1].color = startColor;
+            isHighligthed = false;
         }
+    }
+
+    private void OnMouseDown()
+    {
+        UiChooseTurret.SetActive(true);
     }
 
     // Update is called once per frame
@@ -47,5 +67,32 @@ public class BuildingSpace : MonoBehaviour
         {
             isBuildable = false;
         }
+    }
+
+    public void BuyCannon()
+    {
+        BuildTurret(TurretType.CANNON);
+    }
+
+    private void BuyTurret(TurretType turretType)
+    {
+        //Check economy
+        BuildTurret(turretType);
+    }
+
+    private void BuildTurret(TurretType turretType)
+    {
+        GameObject prefab;
+        switch (turretType)
+        {
+            default:
+            case TurretType.CANNON:
+                prefab = canonPrefab;
+                break;
+        }
+
+        Instantiate(prefab, transform.position, Quaternion.identity);
+
+        UiChooseTurret.SetActive(false);
     }
 }
