@@ -2,37 +2,40 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraMovement : MonoBehaviour
+namespace Primozov.TowerDefense
 {
-    [SerializeField] float panSpeed;
-
-    void Start()
+    public class CameraMovement : MonoBehaviour
     {
-        
-    }
+        [SerializeField] float panSpeed;
 
-    void Update()
-    {
-        transform.Translate(HandleInput() * panSpeed * Time.deltaTime, Space.World);
-    }
-
-    Vector3 HandleInput()
-    {
-        Vector3 movementVector = new Vector3(0,0,0);
-
-        movementVector.x = Input.GetAxis("Horizontal");
-        movementVector.z = Input.GetAxis("Vertical");
-
-        if (Input.GetKey(KeyCode.Space))
+        void Start()
         {
-            movementVector.y = 1;
-        }
-        else
-        if (Input.GetKey(KeyCode.LeftControl))
-        {
-            movementVector.y = -1;
+
         }
 
-        return movementVector;
-     }
+        void Update()
+        {
+            transform.Translate(HandleInput() * panSpeed * Time.deltaTime, Space.World);
+        }
+
+        Vector3 HandleInput()
+        {
+            Vector3 movementVector = new Vector3(0, 0, 0);
+
+            movementVector.x = Input.GetAxis("Horizontal");
+            movementVector.z = Input.GetAxis("Vertical");
+
+            if (Input.GetKey(KeyCode.Space))
+            {
+                movementVector.y = 1;
+            }
+            else
+            if (Input.GetKey(KeyCode.LeftControl))
+            {
+                movementVector.y = -1;
+            }
+
+            return movementVector;
+        }
+    }
 }

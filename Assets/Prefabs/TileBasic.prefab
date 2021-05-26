@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7308348423206431964}
   - component: {fileID: 5858223445626240219}
   - component: {fileID: 414649740131686997}
+  - component: {fileID: 8263931531861712216}
   m_Layer: 0
   m_Name: gfx
   m_TagString: Untagged
@@ -82,6 +83,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8263931531861712216
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290252331702588680}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.99999994, y: 0.19999999, z: 0.99999994}
+  m_Center: {x: 0, y: 0.099999994, z: 0}
 --- !u!1 &8159049114105719471
 GameObject:
   m_ObjectHideFlags: 0
@@ -92,7 +106,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6278167827040259110}
   - component: {fileID: 1387221445272272591}
-  - component: {fileID: 7238503982195642271}
+  - component: {fileID: 3759464447019985394}
   m_Layer: 0
   m_Name: TileBasic
   m_TagString: Untagged
@@ -130,7 +144,7 @@ MonoBehaviour:
   rend: {fileID: 414649740131686997}
   highLightColor: {r: 0.24174419, g: 0.7924528, b: 0.16820934, a: 0}
   isBuildable: 1
---- !u!65 &7238503982195642271
+--- !u!65 &3759464447019985394
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -138,8 +152,8 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8159049114105719471}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.9338722, y: 0.27928737, z: 0.91087735}
-  m_Center: {x: -0.0050706863, y: 0.14201237, z: 0.000972569}
+  m_Size: {x: 1, y: 0.1614552, z: 1}
+  m_Center: {x: 0, y: 0.1692724, z: 0}

@@ -42,6 +42,7 @@ public class BuildingSpace : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("Hit");
         if (collision.gameObject.CompareTag("Props") && isBuildable)
         {
             isBuildable = false;
