@@ -16,6 +16,7 @@ public class WaveSpawner : MonoBehaviour
     void Start()
     {
         SpawnWave(startCountEnemies);
+        wavesCooldown = wavesInterval;
     }
 
     private void SpawnWave(int enemiesCount)

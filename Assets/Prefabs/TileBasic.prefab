@@ -143,10 +143,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rend: {fileID: 414649740131686997}
-  highLightColor: {r: 0.24174419, g: 0.7924528, b: 0.16820934, a: 0}
+  freeSpaceColor: {r: 0.16365722, g: 0.8773585, b: 0.10346207, a: 0}
+  builtColor: {r: 0.09518514, g: 0.32477516, b: 0.8773585, a: 0}
   UiChooseTurret: {fileID: 7894109021367065451}
   UiEditTurret: {fileID: 0}
-  turretHeightPosition: 0.2
   canonPrefab: {fileID: 7401209330155700681, guid: 664c4c9dc1aad2c4183ad4d1709b951a, type: 3}
   isBuildable: 1
 --- !u!65 &3759464447019985394
